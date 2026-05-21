@@ -15,7 +15,7 @@ export default function BoletinSidebar() {
   }
 
   return (
-    <aside style={s.aside}>
+    <aside className="boletin-aside" style={s.aside}>
       <div style={s.header}>
         <span style={s.title}>Boletín Oficial</span>
         <a
@@ -65,6 +65,7 @@ export default function BoletinSidebar() {
             href={item.url}
             target="_blank"
             rel="noopener noreferrer"
+            className="boletin-item"
             style={s.item}
           >
             <div style={s.itemMeta}>

@@ -60,7 +60,7 @@ export default function PoliticianCard({ politician, user, province, onLoginRequ
   }
 
   return (
-    <div style={s.card}>
+    <div className="pol-card" style={s.card}>
       <div style={s.top}>
         <div style={s.info}>
           <div style={s.nameRow}>

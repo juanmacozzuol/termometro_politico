@@ -22,12 +22,18 @@ export default function App() {
       <header style={s.header}>
         <h1 style={s.logo}>Termómetro Político 🇦🇷</h1>
         {user ? (
-          <div style={s.userBar}>
-            <select style={s.provSelect} value={province} onChange={e => setProvince(e.target.value)} title="Tu provincia">
+          <div className="app-header-user" style={s.userBar}>
+            <select
+              className="app-prov-select"
+              style={s.provSelect}
+              value={province}
+              onChange={e => setProvince(e.target.value)}
+              title="Tu provincia"
+            >
               <option value="">Provincia (opcional)</option>
               {PROVINCES.map(p => <option key={p} value={p}>{p}</option>)}
             </select>
-            <span style={s.email}>{user.email}</span>
+            <span className="app-email" style={s.email}>{user.email}</span>
             <button style={s.btnSecondary} onClick={logout}>Salir</button>
           </div>
         ) : (
@@ -37,7 +43,7 @@ export default function App() {
         )}
       </header>
 
-      <main style={s.main}>
+      <main className="app-main" style={s.main}>
         {!user && (
           <div style={s.banner}>
             Evaluá a los políticos argentinos por categoría.{' '}
@@ -46,7 +52,7 @@ export default function App() {
             </button>
           </div>
         )}
-        <div style={s.columns}>
+        <div className="app-columns" style={s.columns}>
           <div style={s.content}>
             <div style={s.grid}>
               {politicians.map(pol => (

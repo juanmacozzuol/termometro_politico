@@ -14,3 +14,72 @@ body {
 #root {
   min-height: 100vh;
 }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0f0f13; }
+::-webkit-scrollbar-thumb { background: #252535; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #333350; }
+
+/* Card hover */
+.pol-card {
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.pol-card:hover {
+  border-color: #333350 !important;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+}
+
+/* News article hover */
+.news-article:hover {
+  border-color: #333350 !important;
+}
+
+/* Boletin item hover */
+.boletin-item:hover {
+  border-color: #333350 !important;
+}
+
+/* Input / select focus ring */
+input:focus, select:focus {
+  outline: 1.5px solid #3b5bdb;
+}
+
+/* Button active press */
+button:active {
+  opacity: 0.8;
+}
+
+/* Smooth transitions for interactive elements */
+a, button, select, input {
+  transition: opacity 0.15s, border-color 0.15s, color 0.15s;
+}
+
+/* Mobile layout overrides */
+@media (max-width: 768px) {
+  .app-columns {
+    flex-direction: column !important;
+  }
+
+  .app-header-user {
+    gap: 0.5rem !important;
+  }
+
+  .app-prov-select {
+    display: none;
+  }
+
+  .app-email {
+    display: none;
+  }
+
+  .boletin-aside {
+    width: 100% !important;
+    position: static !important;
+    max-height: none !important;
+  }
+
+  .app-main {
+    padding: 1rem !important;
+  }
+}

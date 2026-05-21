@@ -41,6 +41,7 @@ export default function NewsPanel({ politician }) {
           href={article.link}
           target="_blank"
           rel="noopener noreferrer"
+          className="news-article"
           style={s.article}
         >
           <span style={s.source}>{SOURCE_LABELS[article.source] ?? article.source}</span>
